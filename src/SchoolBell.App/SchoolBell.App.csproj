@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <!-- WPF і WinForms мають однакові імена типів, тому usings пишемо явно. -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>SchoolBell</AssemblyName>
+    <RootNamespace>SchoolBell.App</RootNamespace>
+    <StartupObject>SchoolBell.App.Program</StartupObject>
+    <ApplicationIcon>Assets\bell.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.2.1</Version>
+    <Product>Шкільний дзвінок</Product>
+    <Company>SchoolBell</Company>
+    <!-- Дозволяє збирати проєкт і на не-Windows машинах (CI). -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolBell.Core\SchoolBell.Core.csproj" />
+  </ItemGroup>
+
+</Project>
